@@ -25,13 +25,34 @@
     }
 
     &__seenon-text {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        gap: 15px;
+        align-items: center;
 
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+            
+            
+        }
     }
 
     &__seenon-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        gap: 4rem;
 
         img{
             height: 2.5rem;
+            filter: brightness(65%);
         }
     }
 }
